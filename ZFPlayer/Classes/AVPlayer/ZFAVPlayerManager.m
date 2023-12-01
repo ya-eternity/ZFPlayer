@@ -268,7 +268,7 @@ static NSString *const kPresentationSize         = @"presentationSize";
     _playerItem = [AVPlayerItem playerItemWithAsset:_asset];
     _player = [AVPlayer playerWithPlayerItem:_playerItem];
     _imageGenerator = [AVAssetImageGenerator assetImageGeneratorWithAsset:_asset];
-
+    _player.muted = _muted;
     [self enableAudioTracks:YES inPlayerItem:_playerItem];
     
     ZFPlayerPresentView *presentView = [[ZFPlayerPresentView alloc] init];
